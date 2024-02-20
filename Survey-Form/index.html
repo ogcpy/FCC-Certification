@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Automotive Survey Form</title>
-    <script src="script.js"></script>
 </head>
 <body>
     <div class="background">
@@ -21,14 +20,14 @@
     <section class="survey">
         <form action="#" id="survey-form">
 
-            <label for="full-name">Name</label>
-            <input type="text" name="full-name" id="full-name" placeholder="John Doe" required>
+            <label for="full-name" id="name-label">Name</label>
+            <input type="text" name="name" id="name" placeholder="John Doe" required>
 
-            <label for="email">E-Mail</label>
+            <label for="email" id="email-label">E-Mail</label>
             <input type="email" name="email" id="email" placeholder="johndoe@email.com" required>
 
-            <label for="age">Age (optional)</label>
-            <input type="number" name="age" id="age" min="0" max="99"  placeholder="0-99" >
+            <label for="number" id="number-label" >Age (optional)</label>
+            <input type="number" name="age" id="number" min="0" max="99"  placeholder="0-99" >
             <label for="dropdown">Which would you say is the main use of your car</label>
 
             <select name="dropdown" id="dropdown">
@@ -41,13 +40,13 @@
             <label for="radio">Would you recommend the car you have to your friends or family</label>
             <div class="choices">
                 <div class="buttonsradio">
-                    <input type="radio" name="radiobutton" id="radiobutton">
+                    <input type="radio" name="radiobutton" id="radiobutton" value="yes" >
                     
                 
-                    <input type="radio" name="radiobutton" id="radiobutton">
+                    <input type="radio" name="radiobutton" id="radiobutton" value="no">
                     
                 
-                    <input type="radio" name="radiobutton" id="radiobutton">
+                    <input type="radio" name="radiobutton" id="radiobutton" value="maybe">
                 </div>
                 <div class="labels">
                     <label for="yes">Yes</label>
@@ -59,14 +58,31 @@
                 
                
             </div>
-
             <label for="multiple">What are the main things you looks for in a car?</label>
-            
-
+            <div class="container">
+                <div class="multipleboxes">   
+                    <input type="checkbox" name="comfort" id="checkbox" value="comfort">
+                    <input type="checkbox" name="sporty" id="checkbox" value="sporty">
+                    <input type="checkbox" name="range" id="range" value="range">
+                    <input type="checkbox" name="aesthetics" id="aesthetic" value="looks">
+                    <input type="checkbox" name="utility" id="utility" value="utility">
+                    <input type="checkbox" name="capacity" id="capactiy" value="capacity">
+                    <input type="checkbox" name="brand" id="brand" value="brand">
+                </div>
+                <div class="multiple">
+                    <label for="comfort">Comfort</label>
+                    <label for="sporty">Sporty</label>
+                    <label for="range">Range</label>
+                    <label for="aesthetic">Looks</label>
+                    <label for="utility">Utility</label>
+                    <label for="capacity">Seats</label>
+                    <label for="brand">Brand</label>
+                </div>
+            </div
             <label for="text-area">Any comments or suggestions?</label>
             <textarea name="text-area" id="text-area" cols="30" rows="10" minlength="10" maxlength="500" placeholder="Type your valueable feedback here:">Type your valueable feedback here: </textarea>
             
-            <input id="button" type="button" value="submit">
+            <input id="submit" type="submit" value="submit">
 
         </form>
     </section>

@@ -115,3 +115,24 @@ p {
     flex-direction: column;
     gap: 5px;
 }
+
+.container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.multipleboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.multiple {
+    font-weight: lighter;
+    margin-right: 510px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: center; 
+}
