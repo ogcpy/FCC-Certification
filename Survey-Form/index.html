@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Automotive Survey Form</title>
+</head>
+<body>
+    <div class="background">
+        <div class="blur">
+            
+        </div>
+    </div>
+
+    <header>
+        <h1 id="title">Automotive Survey Form</h1>
+        <p id="description">We want to know what vehicle you drive currently and why.</p>
+    </header>
+    <section class="survey">
+        <form action="#" id="survey-form">
+
+            <label for="full-name">Name</label>
+            <input type="text" name="full-name" id="full-name" placeholder="John Doe" required>
+
+            <label for="email">E-Mail</label>
+            <input type="email" name="email" id="email" placeholder="johndoe@email.com" required>
+
+            <label for="age">Age (optional)</label>
+            <input type="number" name="age" id="age" min="0" max="99"  placeholder="0-99" >
+            <label for="dropdown">Which would you say is the main use of your car</label>
+
+            <select name="dropdown" id="dropdown">
+                <option value="social">Social</option>
+                <option value="domestic">Domestic</option>
+                <option value="pleasure">Pleasure</option>
+                <option value="business">Business</option>
+                <option value="Other">Other</option>
+            </select>
+            <label for="radio">Would you recommend the car you have to your friends or family</label>
+            <div class="choices">
+                
+                <input type="radio" name="radiobutton" id="radiobutton">
+                <label for="yes">Yes</label>
+               
+                <input type="radio" name="radiobutton" id="radiobutton">
+                <label for="no">No</label>
+              
+                <input type="radio" name="radiobutton" id="radiobutton">
+                <label for="maybe">Maybe</label>
+               
+                
+               
+            </div>
+
+            <label for="multiple">What are the main things you looks for in a car?</label>
+            <select name="multiple" id="multiple">
+                <option value="comfort">Comfort</option>
+                <option value="sporty">Sporty</option>
+                <option value="range">Range</option>
+                <option value="looks">Looks</option>
+                <option value="brand">Brand</option>
+                <option value="reliability">Reliability</option>
+                <option value="features">Features</option>
+                <option value="price">Price</option>
+                <option value="depreciation">Depreciation</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="text-area">Any comments or suggestions?</label>
+            <textarea name="text-area" id="text-area" cols="30" rows="10" minlength="10" maxlength="500">Type your valueable feedback here: </textarea>
+            
+            <input id="button" type="button" value="submit">
+
+        </form>
+    </section>
+    
+</body>
+</html>
