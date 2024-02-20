@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    padding: 30px;
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 40px;
+    font-style: italic;
+}
+
+h4 {
+    font-size: 25px
+}
+
+a {
+    text-decoration: none;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(225 225 225 / 50%);
+    margin: 75px 20px 35px 20px;
+    border-radius: 6px;
+}
+
+#title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 58px;
+    font-weight: bolder;
+    color: rgb(42, 42, 42);
+    padding: 60px 100px 40px 100px;
+}
+
+#sub-text {
+    font-size: 25px;
+    font-weight: light;
+    font-style: italic;
+    padding: 0 100px 30px 100px;
+}
+
+#img-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 6px;
+    height: max-content;
+    width: max-content;
+    margin: 15px;
+    padding: 10px;
+}
+
+#image {
+    padding: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+#img-caption {
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#tribute-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+#timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 50px;
+}
+
+#years {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#quote {
+    background-color: darkgray;
+    color: white;
+    margin: 20px;
+    padding: 35px;
+    border-radius: 8px;
+}
+
+#link {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
+
+
