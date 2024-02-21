@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="/attempt1/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+<script>hljs.highlightAll();</script>
+</head>
+<body>
+    <main id="main-doc">
+        <nav id="navbar">
+            <header><h1 id="title">HTML Documentation</h1></header>
+            <a href="#overview" class="nav-link">Overview</a>
+            <a href="#the-basics" class="nav-link">The basics: heading and paragraphs</a>
+                <a href="#structure" class="nav-link">Implementing structural hierarchy</a>
+                <a href="#why-structure" class="nav-link">Why do we need structure?</a>
+                <a href="#why-semantics" class="nav-link">Why do we need semantics?</a>
+                <a href="#lists" class="nav-link">Lists</a></li>
+                <a href="#emphasis" class="nav-link">Emphasis and importance</a>
+                <a href="#hyperlinks" class="nav-link">Creating hyperlinks</a>
+                <a href="#what-is" class="nav-link">What is a hyperlink?</a>
+                <a href="#references" class="nav-link">References</a>
+        </nav>
+        <div class="container">
+            <section class="main-section" id="overview">
+                <header>
+                <h1 id="overview"><a href="#overview">Overview</a></h1>
+                </header>
+                
+                <p>One of HTML's main jobs is to give text structure so that a browser can display an HTML document the way its developer intends. This article explains the way HTML can be used to structure a page of text by adding headings and paragraphs, emphasizing words, creating lists, and more.</p>
+
+            </section>
+            <section class="main-section" id="the_basics">
+                <header>
+                <h1 id="the_basics"><a href="#the_basics">The basics</a></h1>
+            </header>
+                <p>Most structured text consists of headings and paragraphs, whether you are reading a story, a newspaper, a college textbook, a magazine, etc.</p><br>
+                <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals/newspaper_small.jpg" alt="">
+                <p>Structured content makes the reading experience easier and more enjoyable.</p>
+                <p>In HTML, each paragraph has to be wrapped in a p element, like so:</p>
+                <pre>
+                    <code>
+                        &lt;p&gt;I am a paragraph, oh yes I am.&lt;/p&gt;
+                    </code>
+                </pre>
+                <p>Each heading has to be wrapped in a heading element:</p>
+                <pre>
+                    <code>
+                        &lt;h1&gt;I am the title of the story.&lt;/h1&gt;
+                    </code>
+                </pre>
+                <p>There are six heading elements: h1, h2, h3, h4, h5, and h6. Each element represents a different level of content in the document; h1 represents the main heading, h2 represents subheadings, h3 represents sub-subheadings, and so on.</p>
+                <section class="main-section" id="implementing_structure">
+                    <header>
+                <h1 id="implementing_structure"><a href="#implementing_structure">Implementing structure</a></h1>
+            </header>
+                <p>For example, in this story, the h1 element represents the title of the story, the h2 elements represent the title of each chapter, and the h3 elements represent subsections of each chapter:</p>
+                <pre>
+                    <code>
+                        &lt;h1&gt;The Crushing Bore&lt;/h1&gt;
+
+                        &lt;p&gt;By Chris Mills&lt;/p&gt;
+
+                        &lt;h2&gt;Chapter 1: The dark night&lt;/h2&gt;
+
+                        &lt;p&gt;
+                        It was a dark night. Somewhere, an owl hooted. The rain lashed down on the&hellip;
+                        &lt;/p&gt;
+
+                        &lt;h2&gt;Chapter 2: The eternal silence&lt;/h2&gt;
+
+                        &lt;p&gt;Our protagonist could not so much as a whisper out of the shadowy figure&hellip;&lt;/p&gt;
+
+                        &lt;h3&gt;The specter speaks&lt;/h3&gt;
+
+                        &lt;p&gt;
+                        Several more hours had passed, when all of a sudden the specter sat bolt
+                        upright and exclaimed, &quot;Please have mercy on my soul!&quot;
+                        &lt;/p&gt;
+                    </code>
+                </pre>
+                <p>It's really up to you what the elements involved represent, as long as the hierarchy makes sense. You just need to bear in mind a few best practices as you create such structures:</p>
+                <p><ul>
+                    <li>Preferably, you should use a single h1 per page—this is the top level heading, and all others sit below this in the hierarchy.</li>
+                        <li>Make sure you use the headings in the correct order in the hierarchy. Don't use h3 elements to represent subheadings, followed by h2 elements to represent sub-subheadings—that doesn't make sense and will lead to weird results.</li>
+                        <li>Of the six heading levels available, you should aim to use no more than three per page, unless you feel it is necessary. Documents with many levels (for example, a deep heading hierarchy) become unwieldy and difficult to navigate. On such occasions, it is advisable to spread the content over multiple pages if possible.</li>
+                </ul></p>
+                </section>
+                <section class="main-section" id="why_structure">
+                    <header>
+                <h1 id="why_structure"><a href="#why_structure">Why structure?</a></h1>
+                </header>
+                <p>To answer this question, let's take a look at <a href="https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/html-text-formatting/text-start.html">text-start.html</a>—the starting point of our running example for this article (a nice hummus recipe). You should save a copy of this file on your local machine, as you'll need it for the exercises later on. This document's body currently contains multiple pieces of content. They aren't marked up in any way, but they are separated with line breaks (Enter/Return pressed to go onto the next line).</p>
+                <p>However, when you open the document in your browser, you'll see that the text appears as a big chunk!</p>
+                <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals/screen_shot_2017-03-29_at_09.20.35.png" alt="#">
+                <p>This is because there are no elements to give the content structure, so the browser does not know what is a heading and what is a paragraph. Furthermore:</p>
+                <p><ul>
+                    <li>Users looking at a web page tend to scan quickly to find relevant content, often just reading the headings, to begin with. (We usually spend a very short time on a web page.) If they can't see anything useful within a few seconds, they'll likely get frustrated and go somewhere else.</li>
+                    <li>Search engines indexing your page consider the contents of headings as important keywords for influencing the page's search rankings. Without headings, your page will perform poorly in terms of SEO (Search Engine Optimization).</li>
+                    <li>Severely visually impaired people often don't read web pages; they listen to them instead. This is done with software called a screen reader. This software provides ways to get fast access to given text content. Among the various techniques used, they provide an outline of the document by reading out the headings, allowing their users to find the information they need quickly. If headings are not available, they will be forced to listen to the whole document read out loud.</li>
+                    <li>To style content with CSS, or make it do interesting things with JavaScript, you need to have elements wrapping the relevant content, so CSS/JavaScript can effectively target it.</li>
+                </ul></p>
+                <p>Therefore, we need to give our content structural markup.</p>
+                </section>
+                <section class="main-section" id="why_semantics">
+                    <header>
+                <h1 id="why_semantics"><a href="#why_semantics">Why semantics?</a></h1>
+                </header>
+                <p>Semantics are relied on everywhere around us—we rely on previous experience to tell us what the function of an everyday object is; when we see something, we know what its function will be. So, for example, we expect a red traffic light to mean "stop," and a green traffic light to mean "go." Things can get tricky very quickly if the wrong semantics are applied. (Do any countries use red to mean "go"? We hope not.)</p>
+                <p>In a similar way, we need to make sure we are using the correct elements, giving our content the correct meaning, function, or appearance. In this context, the h1 element is also a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."</p>
+                <pre>
+                    <code>&lt;h1&gt;This is a top level heading&lt;/h1&gt;</code>
+                </pre>
+                <p>By default, the browser will give it a large font size to make it look like a heading (although you could style it to look like anything you wanted using CSS). More importantly, its semantic value will be used in multiple ways, for example by search engines and screen readers (as mentioned above).</p>
+                <p>On the other hand, you could make any element look like a top level heading. Consider the following:</p>
+                <pre>
+                    <code>&lt;span style=&quot;font-size: 32px; margin: 21px 0; display: block;&quot;&gt;
+                        Is this a top level heading?
+                      &lt;/span&gt;</code>
+                </pre>
+                <p>This is a span element. It has no semantics. You use it to wrap content when you want to apply CSS to it (or do something to it with JavaScript) without giving it any extra meaning. (You'll find out more about these later on in the course.) We've applied some CSS to it to make it look like a top level heading, but since it has no semantic value, it will not get any of the extra benefits described above. It is a good idea to use the relevant HTML element for the job.</p>
+            </section>
+            <section class="main-section" id="lists">
+                <header>
+                <h1 id="lists"><a href="#lists">Lists</a></h1>
+                    </header>
+
+                <p>Now let's turn our attention to lists. Lists are everywhere in life—from your shopping list to the list of directions you subconsciously follow to get to your house every day, to the lists of instructions you are following in these tutorials! Lists are everywhere on the web, too, and we've got three different types to worry about.</p>
+                <h2>Unordered</h2>
+                <p>Unordered lists are used to mark up lists of items for which the order of the items doesn't matter.</p>
+                <p>Every unordered list starts off with a ul element—this wraps around all the list items:</p>
+                <pre>
+                    <code>&lt;ul&gt;
+                        milk
+                        eggs
+                        bread
+                        hummus
+                      &lt;/ul&gt;
+                      </code>
+                </pre>
+                <p>The last step is to wrap each list item in a li (list item) element:</p>
+                <pre>
+                    <code>&lt;ul&gt;
+                        &lt;li&gt;milk&lt;/li&gt;
+                        &lt;li&gt;eggs&lt;/li&gt;
+                        &lt;li&gt;bread&lt;/li&gt;
+                        &lt;li&gt;hummus&lt;/li&gt;
+                      &lt;/ul&gt;
+                      </code>
+                    </pre>
+                </section>
+                <section class="main-section" id="emphasis_and_importance">
+                    <header>
+                <h1 id="emphasis_and_importance"><a href="#emphasis_and_importance">Emphasis and importance</a></h1>
+                    </header>
+                <p>In human language, we often emphasize certain words to alter the meaning of a sentence, and we often want to mark certain words as important or different in some way. HTML provides various semantic elements to allow us to mark up textual content with such effects, and in this section, we'll look at a few of the most common ones.</p>
+                <h2>Emphasis</h2>
+                <p>When we want to add emphasis in spoken language, we stress certain words, subtly altering the meaning of what we are saying. Similarly, in written language we tend to stress words by putting them in italics.</p>
+                <p>In HTML we use the em (emphasis) element to mark up such instances. As well as making the document more interesting to read, these are recognized by screen readers, which can be configured to speak them in a different tone of voice. Browsers style this as italic by default, but you shouldn't use this tag purely to get italic styling. To do that, you'd use a span element and some CSS, or perhaps an i element (see below).</p>
+                <pre>
+                    <code>&lt;p&gt;I am &lt;em&gt;glad&lt;/em&gt; you weren't &lt;em&gt;late&lt;/em&gt;.&lt;/p&gt;
+                    </code>
+                </pre>
+                <h2>Strong Importance</h2>
+                <p>To emphasize important words, we tend to stress them in spoken language and bold them in written language.</p>
+                <p>In HTML we use the strong (strong importance) element to mark up such instances. As well as making the document more useful, again these are recognized by screen readers, which can be configured to speak them in a different tone of voice. Browsers style this as bold text by default, but you shouldn't use this tag purely to get bold styling. To do that, you'd use a span element and some CSS, or perhaps a b element (see below).</p>
+                <pre>
+                    <code>&lt;p&gt;This liquid is &lt;strong&gt;highly toxic&lt;/strong&gt;.&lt;/p&gt;
+
+                        &lt;p&gt;I am counting on you. &lt;strong&gt;Do not&lt;/strong&gt; be late!&lt;/p&gt;
+                        </code>
+                </pre>
+                <h2>Italic, bold, underline…</h2>
+                <p>The elements we've discussed so far have clear-cut associated semantics. The situation with b, i, and u is somewhat more complicated. They came about so people could write bold, italics, or underlined text in an era when CSS was still supported poorly or not at all. Elements like this, which only affect presentation and not semantics, are known as presentational elements and should no longer be used because, as we've seen before, semantics is so important to accessibility, SEO, etc.
+                </p>
+                <pre>
+                    <code>&lt;!-- scientific names --&gt;
+                        &lt;p&gt;
+                          The Ruby-throated Hummingbird (&lt;i&gt;Archilochus colubris&lt;/i&gt;) is the most common
+                          hummingbird in Eastern North America.
+                        &lt;/p&gt;
+                        
+                        &lt;!-- foreign words --&gt;
+                        &lt;p&gt;
+                          The menu was a sea of exotic words like &lt;i lang=&quot;uk-latn&quot;&gt;vatrushka&lt;/i&gt;,
+                          &lt;i lang=&quot;id&quot;&gt;nasi goreng&lt;/i&gt; and &lt;i lang=&quot;fr&quot;&gt;soupe &agrave; l'oignon&lt;/i&gt;.
+                        &lt;/p&gt;
+                        
+                        &lt;!-- a known misspelling --&gt;
+                        &lt;p&gt;Someday I'll learn how to &lt;u class=&quot;spelling-error&quot;&gt;spel&lt;/u&gt; better.&lt;/p&gt;
+                        
+                        &lt;!-- term being defined when used in a definition --&gt;
+                        &lt;dl&gt;
+                          &lt;dt&gt;Semantic HTML&lt;/dt&gt;
+                          &lt;dd&gt;
+                            Use the elements based on their &lt;b&gt;semantic&lt;/b&gt; meaning, not their
+                            appearance.
+                          &lt;/dd&gt;
+                        &lt;/dl&gt;
+                        </code>
+                </pre>
+                </section>
+                <section class="main-section" id="hyperlinks">
+                    <header>
+                <h1 id="hyperlinks"><a href="#hyperlinks">Hyperlinks</a></h1>
+                </header>
+                <p>Hyperlinks are really important — they are what makes the Web a web. This article shows the syntax required to make a link, and discusses link best practices.</p>
+                </section>
+                <section class="main-section" id="what-is">
+                    <header>
+                <h1 id="what-is"><a href="#what-is">What is</a></h1>
+                </header>
+                <p>Hyperlinks are one of the most exciting innovations the Web has to offer. They've been a feature of the Web since the beginning, and are what makes the Web a web. Hyperlinks allow us to link documents to other documents or resources, link to specific parts of documents, or make apps available at a web address. Almost any web content can be converted to a link so that when clicked or otherwise activated the web browser goes to another web address (URL).</p>
+                <p>For example, the BBC homepage contains many links that point not only to multiple news stories, but also different areas of the site (navigation functionality), login/registration pages (user tools), and more.</p>
+                <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks/updated-bbc-website.png" alt="#">
+                </section>
+                <section class="main-section" id="main-section">
+                    <header>
+                <h1 id="reference"><a href="#reference">References</a></h1>
+                </header>
+                <p>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">MDN</a></p>
+                </section>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
