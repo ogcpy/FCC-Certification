@@ -1,0 +1,172 @@
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+  }
+
+  @media screen and (max-width: 800px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+
+  h1 {
+    font-size: 6rem;
+  }
+  
+  h2 {
+    font-size: 4.2rem;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--main-white);
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: San Francisco;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.project-title {
+    text-decoration: underline;
+}
+
+.nav {
+    background-color: darkred;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.nav h2 {
+    margin-left: 30px;
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 2rem;
+}
+
+.nav-list a {
+    display: block;
+    font-size: 30px;
+    padding: 20px;
+  }
+  
+.nav-list a:hover {
+    background-color: gray;
+    color: white;
+  }
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(53, 53, 53);
+    height: 100vh;
+    width: 100%;
+  }
+
+  .welcome-section p {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: lighter;
+    color: red;
+  }
+
+  .project-section {
+    background-color: rgb(64, 122, 215);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 50px;
+    text-align: center;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    border-radius: 8px;
+    gap: 8px;
+  }
+
+  .project-image {
+    height: 280px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+.project-section a {
+    font-size: 30px;
+  }
+
+  .projects-grid a {
+    font-size: 18px;
+    color: white;
+  }
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.contact-links {
+    display: flex;
+    gap: 100px;
+}
+
+.contact-links img {
+    width: 100px;
+}
+
+footer {
+    background-color: lightblue;
+    display: flex;
+    gap: 40px;
+    justify-content: end;
+    padding: 20px;
+}
+
+.btn {
+    background-color: white;
+    padding: 30px;
+}
